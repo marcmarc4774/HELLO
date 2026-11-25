@@ -1,0 +1,1797 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="data:," />
+    <title>Finding Your Passion and Dream Job</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,900&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #fffbf2;
+        --bg2: #fff6e3;
+        --card: #ffffff;
+        --ink: #1b1e23;
+        --muted: #5b6470;
+        --line: #e8ddc8;
+        --teal: #0e6b5e;
+        --teal-bg: #e6f2ee;
+        --amber: #c2570a;
+        --amber-bg: #fef0dc;
+        --yellow: #ffc83d;
+        --radius: 18px;
+        --shadow: 0 8px 30px rgba(27, 30, 35, 0.08);
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #111417;
+          --bg2: #171a1e;
+          --card: #1c1f24;
+          --ink: #f2ede3;
+          --muted: #a8b0ba;
+          --line: #2e333a;
+          --teal: #3ec9b6;
+          --teal-bg: #14332e;
+          --amber: #ff9a4d;
+          --amber-bg: #332211;
+          --shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family:
+          "DM Sans",
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          sans-serif;
+        line-height: 1.6;
+      }
+      a {
+        color: var(--teal);
+        text-decoration-color: color-mix(in srgb, var(--teal) 40%, transparent);
+        text-underline-offset: 3px;
+      }
+      a:hover {
+        text-decoration-color: var(--teal);
+      }
+      button,
+      [role="button"],
+      summary,
+      select,
+      input:not([type="checkbox"]) {
+        min-height: 36px;
+      }
+      .wrap {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .topnav {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: color-mix(in srgb, var(--bg) 92%, transparent);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--line);
+      }
+      .topnav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 12px 0;
+      }
+      .brand {
+        font-weight: 900;
+        letter-spacing: -0.02em;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .brand i {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: var(--yellow);
+        display: grid;
+        place-items: center;
+        font-style: normal;
+        font-size: 18px;
+      }
+      .navlinks {
+        display: flex;
+        gap: 4px;
+        flex-wrap: wrap;
+      }
+      .navlinks a {
+        color: var(--ink);
+        text-decoration: none;
+        font-size: 13.5px;
+        font-weight: 600;
+        padding: 8px 10px;
+        border-radius: 999px;
+      }
+      .navlinks a:hover {
+        background: var(--bg2);
+      }
+      @media (max-width: 720px) {
+        .navlinks {
+          display: none;
+        }
+      }
+      .hero {
+        padding: 48px 0 28px;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 28px;
+        align-items: start;
+      }
+      @media (max-width: 860px) {
+        .hero-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+      .kicker {
+        font-family: "DM Mono", monospace;
+        font-size: 12px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--amber);
+        font-weight: 500;
+      }
+      h1 {
+        font-family: "DM Serif Display", serif;
+        font-weight: 400;
+        font-size: clamp(42px, 6vw, 68px);
+        line-height: 0.95;
+        letter-spacing: -0.02em;
+        margin: 12px 0 16px;
+      }
+      h1 em {
+        font-style: italic;
+        color: var(--teal);
+      }
+      .lede {
+        font-size: 19px;
+        line-height: 1.55;
+        color: var(--muted);
+        max-width: 620px;
+      }
+      .lede strong {
+        color: var(--ink);
+      }
+      .hero-ctas {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 22px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 18px;
+        border-radius: 999px;
+        font-weight: 700;
+        font-size: 15px;
+        text-decoration: none;
+        border: 1px solid transparent;
+        min-height: 48px;
+      }
+      .btn-primary {
+        background: var(--ink);
+        color: var(--bg);
+      }
+      .btn-primary:hover {
+        opacity: 0.9;
+      }
+      .btn-secondary {
+        background: var(--card);
+        color: var(--ink);
+        border-color: var(--line);
+      }
+      .rule-box {
+        background: var(--ink);
+        color: var(--bg);
+        border-radius: var(--radius);
+        padding: 22px;
+      }
+      .rule-box h3 {
+        margin: 0 0 8px;
+        font-size: 13px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--yellow);
+      }
+      .rule-box p {
+        margin: 0;
+        font-size: 16.5px;
+        line-height: 1.55;
+      }
+      .rule-box p + p {
+        margin-top: 10px;
+        font-size: 14.5px;
+        opacity: 0.85;
+      }
+      .stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-top: 12px;
+      }
+      .stat {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 16px;
+      }
+      .stat b {
+        font-family: "DM Serif Display", serif;
+        font-size: 28px;
+        font-weight: 400;
+        display: block;
+        line-height: 1;
+      }
+      .stat span {
+        font-size: 13px;
+        color: var(--muted);
+      }
+      section {
+        padding: 36px 0;
+      }
+      .sec-head {
+        max-width: 720px;
+        margin-bottom: 22px;
+      }
+      .sec-head h2 {
+        font-family: "DM Serif Display", serif;
+        font-weight: 400;
+        font-size: clamp(30px, 4vw, 42px);
+        line-height: 1.05;
+        margin: 8px 0 10px;
+        letter-spacing: -0.01em;
+      }
+      .sec-head p {
+        color: var(--muted);
+        font-size: 16.5px;
+        margin: 0;
+      }
+      .num {
+        font-family: "DM Mono", monospace;
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--teal);
+        font-weight: 700;
+      }
+      .grid2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      .grid3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+      @media (max-width: 860px) {
+        .grid2,
+        .grid3 {
+          grid-template-columns: 1fr;
+        }
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 22px;
+        box-shadow: var(--shadow);
+      }
+      .card h3 {
+        margin: 0 0 8px;
+        font-size: 18px;
+        letter-spacing: -0.01em;
+      }
+      .card p,
+      .card li {
+        color: var(--muted);
+        font-size: 15px;
+      }
+      .card ul {
+        margin: 8px 0 0;
+        padding-left: 18px;
+      }
+      .card li + li {
+        margin-top: 4px;
+      }
+      .riasec {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 14px;
+      }
+      .chip {
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: var(--teal-bg);
+        color: var(--ink);
+        font-size: 13.5px;
+        font-weight: 700;
+        border: 1px solid var(--line);
+      }
+      .chip b {
+        color: var(--teal);
+      }
+      .ikigai-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        align-items: center;
+      }
+      @media (max-width: 860px) {
+        .ikigai-wrap {
+          grid-template-columns: 1fr;
+        }
+      }
+      .ikigai-svg {
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+        display: block;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14.5px;
+      }
+      th {
+        text-align: left;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--muted);
+        padding: 10px 12px;
+        border-bottom: 2px solid var(--line);
+      }
+      td {
+        padding: 12px;
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+      }
+      td:first-child {
+        font-weight: 700;
+      }
+      @media (max-width: 760px) {
+        table,
+        thead,
+        tbody,
+        tr,
+        td {
+          display: block;
+          width: 100%;
+        }
+        thead {
+          display: none;
+        }
+        tr {
+          background: var(--card);
+          border: 1px solid var(--line);
+          border-radius: 14px;
+          margin-bottom: 10px;
+          padding: 6px 0;
+        }
+        td {
+          border: none;
+          padding: 6px 14px;
+        }
+      }
+      .track {
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        background: var(--card);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+      .track-head {
+        padding: 22px 22px 0;
+        display: flex;
+        gap: 16px;
+        align-items: flex-start;
+      }
+      .track-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 14px;
+        display: grid;
+        place-items: center;
+        font-size: 26px;
+        flex-shrink: 0;
+      }
+      .track h3 {
+        margin: 0;
+        font-size: 21px;
+      }
+      .track .q {
+        color: var(--amber);
+        font-weight: 700;
+        font-size: 14px;
+      }
+      .track-body {
+        padding: 6px 22px 22px;
+      }
+      .track-body h4 {
+        margin: 16px 0 6px;
+        font-size: 13px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .track-body p,
+      .track-body li {
+        font-size: 15px;
+        color: var(--muted);
+      }
+      .track-body ul {
+        padding-left: 18px;
+        margin: 6px 0;
+      }
+      .warn {
+        background: var(--amber-bg);
+        border: 1px solid color-mix(in srgb, var(--amber) 25%, var(--line));
+        border-radius: 12px;
+        padding: 14px 16px;
+        font-size: 14.5px;
+      }
+      .warn strong {
+        color: var(--amber);
+      }
+      .plan {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+      }
+      @media (max-width: 980px) {
+        .plan {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 560px) {
+        .plan {
+          grid-template-columns: 1fr;
+        }
+      }
+      .week {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 20px;
+        position: relative;
+      }
+      .week::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 20px;
+        right: 20px;
+        height: 4px;
+        border-radius: 999px;
+        background: var(--yellow);
+      }
+      .week h3 {
+        margin: 10px 0 4px;
+      }
+      .week .deliv {
+        margin-top: 14px;
+        background: var(--bg2);
+        border-radius: 10px;
+        padding: 10px 12px;
+        font-size: 13.5px;
+      }
+      .week ul {
+        padding-left: 18px;
+        margin: 8px 0;
+        color: var(--muted);
+        font-size: 14.5px;
+      }
+      .pitfall {
+        border-top: 3px solid var(--ink);
+        padding-top: 14px;
+      }
+      .pitfall h3 {
+        margin: 0 0 6px;
+        font-size: 16px;
+      }
+      .pitfall p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14.5px;
+      }
+      .sources {
+        font-size: 13.5px;
+        color: var(--muted);
+      }
+      .sources li {
+        margin-bottom: 6px;
+        word-break: break-word;
+      }
+      .footer {
+        border-top: 1px solid var(--line);
+        padding: 28px 0 40px;
+        margin-top: 12px;
+      }
+      .badge {
+        display: inline-block;
+        padding: 4px 10px;
+        border-radius: 999px;
+        background: var(--teal-bg);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+      textarea {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 10px;
+        font: inherit;
+        font-size: 14.5px;
+        background: var(--bg);
+        color: var(--ink);
+        resize: vertical;
+      }
+      label {
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topnav">
+      <div class="wrap topnav-inner">
+        <div class="brand"><i>◐</i> Finding your path</div>
+        <nav class="navlinks" aria-label="Sections">
+          <a href="#know">Know yourself</a><a href="#test">Test cheaply</a
+          ><a href="#tracks">4 tracks</a><a href="#pitfalls">Pitfalls</a
+          ><a href="#resources">Québec resources</a
+          ><a href="#plan">4-week plan</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="wrap">
+      <!-- HERO -->
+      <div class="hero">
+        <div class="hero-grid">
+          <div>
+            <div class="kicker">
+              For students in Québec • Free starting points
+            </div>
+            <h1>Your passion isn't hidden. <em>You build it by trying.</em></h1>
+            <p class="lede">
+              There's no single passion to “discover” once, then a perfect job
+              for life. The sources agree:
+              <strong>passion is built through trials</strong> — you spot 2–3
+              leads (what you like + what you're a bit good at + what people
+              need / will pay for), you <strong>test them cheaply</strong>, you
+              keep the one that still gives you energy
+              <strong>after</strong> the boring part, then you turn it into a
+              path.
+            </p>
+            <div class="hero-ctas">
+              <a
+                class="btn btn-primary"
+                href="https://www.quebec.ca/emploi/informer-metier-profession/choix-carriere/emplois-avenir"
+                target="_blank"
+                rel="noopener"
+                >Start with the free RIASEC quiz →</a
+              >
+              <a class="btn btn-secondary" href="#plan">See the 4-week plan</a>
+            </div>
+            <p style="font-size: 13.5px; color: var(--muted); margin-top: 12px">
+              Québec.ca “Jobs of the future” — last updated March 24, 2026,
+              checked live Nov 25, 2026. Official, free, and linked directly to
+              job profiles with hourly pay and outlook.
+            </p>
+          </div>
+          <div>
+            <div class="rule-box">
+              <h3>★ Golden rule</h3>
+              <p>
+                Don't quit your studies or a stable income for an untested lead.
+              </p>
+              <p>
+                Test in parallel, a few hours a week, then decide. Keeping a
+                student job / Plan Z while you explore isn't a lack of ambition
+                — it's what lets you choose without financial panic.
+              </p>
+            </div>
+            <div class="stats">
+              <div class="stat">
+                <b>2–3</b
+                ><span
+                  >leads to keep at the end of Step 1 — not one “answer”</span
+                >
+              </div>
+              <div class="stat">
+                <b>3–5 h</b
+                ><span>per week for the 4-week plan, alongside studies</span>
+              </div>
+              <div class="stat">
+                <b>20 min</b
+                ><span
+                  >for an informational interview — the cheapest real-world
+                  test</span
+                >
+              </div>
+              <div class="stat">
+                <b>$0</b
+                ><span>for RIASEC, Academos, CJE &amp; JeunesExplo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 1 KNOW YOURSELF -->
+      <section id="know">
+        <div class="sec-head">
+          <div class="num">01 — Know yourself</div>
+          <h2>Start with self-knowledge, not a job title</h2>
+          <p>
+            Québec's official approach on “Making a career choice” has four
+            steps: know yourself (questionnaire, RIASEC profile), get advice,
+            discover jobs of the future, and see a guidance counsellor. Page
+            last updated Nov 26, 2024 —
+            <a
+              href="https://www.quebec.ca/emploi/informer-metier-profession/choix-carriere"
+              target="_blank"
+              rel="noopener"
+              >quebec.ca/choix-carriere</a
+            >.
+          </p>
+        </div>
+
+        <div class="grid2">
+          <div class="card">
+            <span class="badge">Do this first • Free</span>
+            <h3 style="margin-top: 10px">The RIASEC model — 6 profiles</h3>
+            <p>
+              Six profiles, each linked to abilities, personality traits and
+              interests. The free Québec.ca questionnaire surfaces your
+              <strong style="color: var(--ink)">three dominant traits</strong>
+              and points you to matching jobs of the future. The “One passion,
+              many options” campaign for ages 14–24 is built on the same
+              RIASEC-inspired quiz.
+            </p>
+            <div class="riasec">
+              <span class="chip"><b>R</b> Realistic</span
+              ><span class="chip"><b>I</b> Investigative</span
+              ><span class="chip"><b>A</b> Artistic</span
+              ><span class="chip"><b>S</b> Social</span
+              ><span class="chip"><b>E</b> Enterprising</span
+              ><span class="chip"><b>C</b> Conventional</span>
+            </div>
+            <p style="margin-top: 12px">
+              <a
+                href="https://www.quebec.ca/emploi/informer-metier-profession/choix-carriere/emplois-avenir"
+                target="_blank"
+                rel="noopener"
+                >Take the quiz on Québec.ca →</a
+              >
+            </p>
+          </div>
+          <div class="card">
+            <h3>Clarify your non-negotiables</h3>
+            <p>
+              From the Cégep Édouard-Montpetit guide: after interests / traits /
+              aptitudes / values, list your
+              <strong style="color: var(--ink)">essential criteria</strong> —
+              they help you eliminate leads, which is as useful as finding them.
+            </p>
+            <ul>
+              <li>Desired length of studies &amp; minimum salary</li>
+              <li>Indoors or not • routine vs. variety</li>
+              <li>Sociable or solitary • manual or intellectual</li>
+              <li>Create or help people</li>
+            </ul>
+            <p>
+              Cégep guidance services offer the same synthesis (interests,
+              skills, traits, values) in 2–5 meetings, with psychometric tests
+              if needed.
+            </p>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top: 16px">
+          <div class="ikigai-wrap">
+            <div>
+              <h3>Ikigai — a synthesis exercise, not a magic test</h3>
+              <p>
+                Ikigai crosses four circles. The exercise sheet recommends
+                <strong style="color: var(--ink)">3–5 points per circle</strong
+                >, then spotting the overlaps. Use it to formulate leads — which
+                you then test in Section 2.
+              </p>
+              <div style="display: grid; gap: 10px; margin-top: 14px">
+                <div>
+                  <label for="ik1">What I love</label
+                  ><textarea
+                    id="ik1"
+                    rows="2"
+                    placeholder="What makes me lose track of time? What would I do even with enough money to live? What do I read / watch on my own?"
+                  ></textarea>
+                </div>
+                <div>
+                  <label for="ik2">What I'm good at</label
+                  ><textarea
+                    id="ik2"
+                    rows="2"
+                    placeholder="What do people ask me for help with? What do I learn fast? What am I proud of?"
+                  ></textarea>
+                </div>
+                <div>
+                  <label for="ik3">What I can be paid for</label
+                  ><textarea
+                    id="ik3"
+                    rows="2"
+                    placeholder="What service / product could I sell? Which skills can I monetize? Which growing jobs are near me?"
+                  ></textarea>
+                </div>
+                <div>
+                  <label for="ik4">What the world needs</label
+                  ><textarea
+                    id="ik4"
+                    rows="2"
+                    placeholder="What frustrates me in the world? Which problems do I care about?"
+                  ></textarea>
+                </div>
+              </div>
+              <p style="font-size: 13px">
+                Worksheet stays in this tab only — copy it into your notes when
+                you're done. Source: Workforce WindsorEssex Ikigai activity
+                sheet.
+              </p>
+            </div>
+            <div>
+              <svg
+                class="ikigai-svg"
+                viewBox="0 0 400 400"
+                role="img"
+                aria-label="Ikigai diagram: four overlapping circles — love, good at, paid for, world needs"
+              >
+                <circle
+                  cx="200"
+                  cy="145"
+                  r="105"
+                  fill="#0E6B5E"
+                  fill-opacity="0.28"
+                  stroke="var(--teal)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="145"
+                  cy="215"
+                  r="105"
+                  fill="#C2570A"
+                  fill-opacity="0.22"
+                  stroke="var(--amber)"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="255"
+                  cy="215"
+                  r="105"
+                  fill="#FFC83D"
+                  fill-opacity="0.35"
+                  stroke="#B77900"
+                  stroke-width="1.5"
+                />
+                <circle
+                  cx="200"
+                  cy="265"
+                  r="95"
+                  fill="#1B1E23"
+                  fill-opacity="0.12"
+                  stroke="var(--ink)"
+                  stroke-width="1.5"
+                />
+                <text
+                  x="200"
+                  y="82"
+                  text-anchor="middle"
+                  font-size="14"
+                  font-weight="700"
+                  fill="var(--ink)"
+                >
+                  LOVE
+                </text>
+                <text
+                  x="72"
+                  y="225"
+                  text-anchor="middle"
+                  font-size="14"
+                  font-weight="700"
+                  fill="var(--ink)"
+                >
+                  GOOD AT
+                </text>
+                <text
+                  x="328"
+                  y="225"
+                  text-anchor="middle"
+                  font-size="14"
+                  font-weight="700"
+                  fill="var(--ink)"
+                >
+                  PAID FOR
+                </text>
+                <text
+                  x="200"
+                  y="345"
+                  text-anchor="middle"
+                  font-size="13"
+                  font-weight="700"
+                  fill="var(--ink)"
+                >
+                  WORLD NEEDS
+                </text>
+                <text
+                  x="200"
+                  y="205"
+                  text-anchor="middle"
+                  font-size="15"
+                  font-weight="900"
+                  fill="var(--ink)"
+                >
+                  IKIGAI
+                </text>
+              </svg>
+              <div class="card" style="box-shadow: none; margin-top: 8px">
+                <h3>3 journaling exercises (15–20 min)</h3>
+                <ul>
+                  <li>
+                    <strong style="color: var(--ink)"
+                      >Energy journal — 7 days.</strong
+                    >
+                    Each evening, note 2–3 moments: what gave energy vs. drained
+                    it, and exactly what you were doing. The decisive test is
+                    energy <em>after</em> the session.
+                  </li>
+                  <li>
+                    <strong style="color: var(--ink)"
+                      >Curiosity / jealousy journal.</strong
+                    >
+                    Note what sparks curiosity and what makes you a bit jealous
+                    — jealousy often hides a desire: “I'd like to be in their
+                    place.”
+                  </li>
+                  <li>
+                    <strong style="color: var(--ink)"
+                      >2-year skills inventory.</strong
+                    >
+                    List moments you were absorbed, useful or proud; phrase each
+                    strength precisely (“make complicated info understandable in
+                    one page” beats “I'm creative”). Ask people around you how
+                    they'd describe you — without censoring yourself.
+                  </li>
+                </ul>
+                <p>
+                  <strong style="color: var(--ink)">Goal of this step:</strong>
+                  not one answer, but 2–3 written leads, each scored on energy /
+                  current skill / real demand (who would pay, for what concrete
+                  benefit?). Keep the top 2–3 totals — a low score just shows
+                  what you'd need to learn or accept.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2 TEST -->
+      <section id="test">
+        <div class="sec-head">
+          <div class="num">02 — Test cheaply</div>
+          <h2>Test the real work, not the idea of it</h2>
+          <p>
+            Every source shares the same principle: confront the lead with real
+            work. A failed test isn't a failure — it saves you months of
+            training and thousands of dollars in the wrong direction.
+          </p>
+        </div>
+        <div class="card" style="padding: 6px 6px 0; overflow: hidden">
+          <table>
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th>Cost / time</th>
+                <th>What it reveals</th>
+                <th>Where in Québec</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Informational interview</td>
+                <td>Free • 20–30 min</td>
+                <td>
+                  Typical day, worst part of the job, real path, surprises
+                </td>
+                <td>Academos (free, 14–30), LinkedIn, alumni, teachers</td>
+              </tr>
+              <tr>
+                <td>One-day internship / Student for a day</td>
+                <td>Free • 1 day</td>
+                <td>Real setting, vibe, pace</td>
+                <td>
+                  JeunesExplo (14–22), cégep “student for a day”, open houses
+                </td>
+              </tr>
+              <tr>
+                <td>Targeted volunteering</td>
+                <td>Free • a few hrs/week</td>
+                <td>Real responsibility, meaning, network</td>
+                <td>Community orgs, camps, schools, CJE</td>
+              </tr>
+              <tr>
+                <td>Mini-project / side project</td>
+                <td>Almost free</td>
+                <td>
+                  Whether you like doing the work with a client, deadline &amp;
+                  revisions
+                </td>
+                <td>
+                  Game jam, job for a friend / non-profit, stock simulator
+                </td>
+              </tr>
+              <tr>
+                <td>Short intro course / workshop</td>
+                <td>Low cost • a few weeks</td>
+                <td>Whether the subject itself hooks you</td>
+                <td>Cégeps, libraries, free online platforms</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="grid3" style="margin-top: 16px">
+          <div class="card">
+            <h3>Talk to 3–4 people per lead</h3>
+            <p>
+              One opinion can be atypical. Ask about the ordinary, not the
+              exceptional: What does a normal Tuesday look like? What's the
+              worst part? What do people in the field complain about? HEC
+              Montréal stresses:
+              <strong style="color: var(--ink)">don't ask for a job</strong> in
+              an informational meeting. Prepare 5–8 questions, thank them the
+              same day or next, follow up weeks later. Talk to someone
+              early-career <em>and</em> someone experienced.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Deliberately test the boring part</h3>
+            <p>
+              Every job is ~20% what attracted you and 80% everything else.
+              Design: revisions &amp; client feedback. Teaching: grading &amp;
+              paperwork. Liking the 20% proves nothing —
+              <strong style="color: var(--ink)"
+                >tolerating the 80% is a real signal</strong
+              >. Also test the lifestyle: hours, solo vs. constant public
+              contact, travel, physical work.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Let the novelty wear off</h3>
+            <p>
+              One day isn't enough — novelty carries anything for a day. Aim for
+              several days spread over a few weeks, or one project from start to
+              finish. Keep a mini-journal during each test: tasks liked /
+              disliked, pace, vibe, mental load, satisfaction. Services Québec
+              may also offer short internships or workplace observation — ask a
+              local office.
+            </p>
+          </div>
+        </div>
+        <p style="font-size: 14px; color: var(--muted)">
+          A sample 30-day test rhythm from the sources: clarify the goal (days
+          1–3) → reach out (4–7) → propose a micro-internship (8–14) → do the
+          immersion (15–21) → analyse feedback (22–25) → decide: go deeper,
+          pivot, or plan a gradual transition (26–30).
+        </p>
+      </section>
+
+      <!-- 3 TURN INTO PATH + TRACKS -->
+      <section id="tracks">
+        <div class="sec-head">
+          <div class="num">03 — Turn an interest into a path</div>
+          <h2>The general sequence, then your 4 tracks</h2>
+          <p>
+            1) Validate the lead (Section 2) before any long or costly
+            enrolment. 2) Find the shortest training that opens the door — DEP,
+            technical DEC, certificate, bachelor's — and check prerequisites,
+            limited enrolment &amp; deadlines (often
+            <strong>March 1</strong> for limited-enrolment college programs) on
+            Pygma &amp; InforouteFPT. 3) Build a portfolio / proof of work from
+            the test onward. 4) Network continuously. 5) Aim for a first real
+            experience — credited internship, work-study, student job, one-off
+            contract.
+          </p>
+          <p>
+            None of the four interests below is presented as “the” answer. Each
+            is a lead to test.
+          </p>
+        </div>
+
+        <div style="display: grid; gap: 16px">
+          <article class="track">
+            <div class="track-head">
+              <div class="track-icon" style="background: #e6f2ee">🎮</div>
+              <div>
+                <div class="q">
+                  Key question: do you like making games — or only playing them?
+                </div>
+                <h3>Video game creation</h3>
+              </div>
+            </div>
+            <div class="track-body">
+              <h4>Cheap test</h4>
+              <p>
+                Join a <strong>game jam</strong> (build a small game in a
+                weekend, often in a team, with free tools like Godot or Unity);
+                finish a full tutorial and publish a mini-game on itch.io;
+                interview a developer or 3D artist via Academos. The test must
+                check: coding, modelling, iterating, fixing bugs, working within
+                technical constraints.
+              </p>
+              <h4>Training in Québec</h4>
+              <ul>
+                <li>
+                  <strong
+                    >DEC Techniques in 3D production &amp; image synthesis
+                    (574.C0, 3 years)</strong
+                  >
+                  — e.g. Cégep Limoilou: Unreal Engine, Maya, Blender, Houdini,
+                  professional portfolio in session 6, credited internship
+                  possible.
+                  <a
+                    href="https://www.cegeplimoilou.ca/programmes/dec-production-3d/"
+                    target="_blank"
+                    rel="noopener"
+                    >cegeplimoilou.ca</a
+                  >
+                </li>
+                <li>
+                  <strong
+                    >Bachelor's in 3D creation for video games — École NAD-UQAC
+                    (Montréal)</strong
+                  >: DEC–BAC bridge (30 credits recognized),
+                  <strong
+                    >portfolio required for admission (minimum 60%
+                    evaluation)</strong
+                  >; project-based approach builds your portfolio as you go.
+                  <a
+                    href="https://www.uqac.ca/programme/6667/"
+                    target="_blank"
+                    rel="noopener"
+                    >uqac.ca/programme/6667</a
+                  >
+                </li>
+              </ul>
+              <h4>Neighbouring jobs to compare</h4>
+              <p>
+                Game programmer, 3D artist, game designer, tester, animator —
+                compare pay &amp; outlook in the profiles on Québec.ca /
+                Repères.
+              </p>
+            </div>
+          </article>
+
+          <article class="track">
+            <div class="track-head">
+              <div class="track-icon" style="background: #fef0dc">✏️</div>
+              <div>
+                <div class="q">
+                  Key test: can you produce on command, with deadlines &amp;
+                  revisions?
+                </div>
+                <h3>Digital illustration / visual art</h3>
+              </div>
+            </div>
+            <div class="track-body">
+              <h4>Cheap test</h4>
+              <p>
+                Daily drawing challenge for 2–3 weeks (30 min/day, assigned
+                subjects — not only what you like to draw); one real commission
+                for a friend, club or non-profit (poster, logo, illustration)
+                with a deadline and revisions; publish regularly and see if you
+                keep the pace when it's on command.
+              </p>
+              <h4>Training in Québec</h4>
+              <ul>
+                <li>
+                  <strong
+                    >DEC in Illustration (574.A0, 3 years) — Cégep de
+                    Lévis</strong
+                  >: the only program of its kind in French in Québec;
+                  traditional &amp; digital drawing, concept art, characters
+                  &amp; environments, 2D animation, running a creative business;
+                  exhibition in front of employers + professional portfolio.
+                  Admission:
+                  <strong>portfolio of 20 works + letter of intent</strong>
+                  (submission March 1 per published criteria).
+                  <a
+                    href="https://www.cegeplevis.ca/programmes/type/techniques/illustration/"
+                    target="_blank"
+                    rel="noopener"
+                    >cegeplevis.ca</a
+                  >
+                </li>
+                <li>
+                  Neighbour: <strong>DEC in Graphic design (570.G0)</strong>,
+                  e.g. Dawson — Photoshop, Illustrator, InDesign, portfolio.
+                </li>
+              </ul>
+              <div class="warn">
+                <strong>Heads-up:</strong> the admission portfolio requires
+                observational drawing (perspective, portrait, still life). If
+                those exercises completely put you off, that's useful
+                information <em>before</em> you enrol.
+              </div>
+            </div>
+          </article>
+
+          <article class="track">
+            <div class="track-head">
+              <div class="track-icon" style="background: #e6f2ee">🧑‍🏫</div>
+              <div>
+                <div class="q">
+                  Key test: do you like group management &amp; planning — or
+                  only the idea of passing things on?
+                </div>
+                <h3>Teaching / recreation work</h3>
+              </div>
+            </div>
+            <div class="track-body">
+              <h4>Cheap test</h4>
+              <p>
+                Lead a group for a few weeks (day camp, homework help, tutoring,
+                student club, youth-centre volunteering) — the most faithful,
+                cheapest test here; observe a day in a classroom or a municipal
+                recreation service; interview a teacher <em>and</em> a
+                recreation technician to compare realities (hours,
+                grading/planning, group management, summers).
+              </p>
+              <h4>Training in Québec</h4>
+              <ul>
+                <li>
+                  <strong
+                    >Recreation — DEC Techniques in recreation management &amp;
+                    intervention (391.A0, 36 months)</strong
+                  >: plan, organize, coordinate, lead &amp; evaluate
+                  socio-recreational activities.
+                  <a
+                    href="https://www.inforoutefpt.org/formation-technique/diplome-etudes-collegiales/369?region=6"
+                    target="_blank"
+                    rel="noopener"
+                    >inforoutefpt.org</a
+                  >
+                  Work in schools, municipalities, community &amp; recreational
+                  tourism; possible continuation in recreology or
+                  leisure/culture/tourism at university.
+                </li>
+                <li>
+                  <strong
+                    >Teaching — Bachelor's in preschool &amp; primary education
+                    or secondary education (120 credits)</strong
+                  >
+                  leading to a teaching licence. Official list of programs
+                  leading to a teaching authorization:
+                  <a
+                    href="https://www.quebec.ca/gouvernement/travailler-gouvernement/metiers-education/enseignant-formation-generale-jeunes-professionnelle-adultes/devenir-enseignant/programmes-formation-enseignement"
+                    target="_blank"
+                    rel="noopener"
+                    >Québec.ca</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="track">
+            <div class="track-head">
+              <div class="track-icon" style="background: #fef0dc">📈</div>
+              <div>
+                <div class="q">
+                  Test this curiosity with no real money first
+                </div>
+                <h3>Finance / trading</h3>
+              </div>
+            </div>
+            <div class="track-body">
+              <h4>Cheap, no-risk test</h4>
+              <p>
+                Open a <strong>paper-trading account</strong> (virtual money,
+                real prices) and keep a decision journal for 4 weeks; take an
+                intro course in finance / economics; interview a financial
+                advisor, analyst or accountant to distinguish
+                <em>active trading</em>, <em>long-term investing</em> and
+                <em>finance jobs</em> — three different realities.
+              </p>
+              <p>
+                <strong>Québec/Canadian tool:</strong> the
+                <strong>Montréal Exchange (TMX) trading simulator</strong> —
+                free virtual platform, real market data (15-minute delay),
+                without risking a single real dollar; also used in a simulation
+                program for Québec university teams.
+                <a
+                  href="https://www.m-x.ca/en/insights?id=97"
+                  target="_blank"
+                  rel="noopener"
+                  >m-x.ca</a
+                >
+              </p>
+              <div class="warn">
+                <strong>Important warnings:</strong> Simulators teach mechanics
+                (placing an order, checking quantities) but can encourage risky
+                behaviour — frequent trading, daily checking, trying to “beat
+                the market” — which is closer to gambling than investing; the
+                research cited favours the long term (“buy and hold”) over
+                short-term speculation. Before opening a real account in Canada
+                you need a SIN, a Canadian bank account, and defined goals &amp;
+                risk tolerance.
+                <strong
+                  >Never borrow, and never use tuition or rent money to “test”
+                  trading. Don't confuse one good month in simulation with a
+                  stable income.</strong
+                >
+                If your interest is really analysis, numbers and advising, the
+                stable jobs in the field (accounting, corporate finance,
+                financial planning, analysis) deserve the same exploration via
+                Repères / Québec.ca. This page gives no financial advice and
+                does not present trading as income.
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 4 PITFALLS -->
+      <section id="pitfalls">
+        <div class="sec-head">
+          <div class="num">04 — Common pitfalls</div>
+          <h2>Six traps that waste time &amp; money</h2>
+        </div>
+        <div class="grid3">
+          <div class="pitfall">
+            <h3>1. Confusing a hobby with a job</h3>
+            <p>
+              Loving to cook ≠ running a restaurant with split shifts. Loving
+              animals ≠ physical care, emergencies &amp; clients. Question the
+              real work, not just the subject. If an activity is only enjoyable
+              in its ideal version — no clients, deadlines, repetition or
+              constraints — keep it as a hobby rather than forcing it to pay.
+            </p>
+          </div>
+          <div class="pitfall">
+            <h3>2. Waiting for the perfect passion</h3>
+            <p>
+              “Find your passion” is one of the most time-wasting pieces of
+              advice: it implies a treasure already inside you, so you wait,
+              search, switch programs, and feel behind. Reality is often
+              reversed: <strong>passion comes after skill</strong> — we love
+              what we do well and are recognized for. Psychology research
+              (O'Keefe, Dweck &amp; Walton, <em>Psychological Science</em>)
+              shows a fixed view of interests makes people less likely to
+              explore and quicker to give up when it gets hard.
+            </p>
+          </div>
+          <div class="pitfall">
+            <h3>3. Believing there's only one right path / it's too late</h3>
+            <p>
+              Four myths slow people down: it's too late to change, you must
+              find your passion first, a perfect path exists, success is
+              measured the same for everyone. Thinking in Plan A (current path)
+              / B (nearby pivot) / Z (fallback, e.g. a food-service job) — from
+              Hoffman &amp; Casnocha, <em>The Start-up of You</em> — releases
+              the pressure of a definitive choice. A vocation is a lifelong
+              process, not a destination.
+            </p>
+          </div>
+          <div class="pitfall">
+            <h3>4. Choosing on a single source</h3>
+            <p>
+              One online test, one video or one relative's opinion isn't enough.
+              The college guide warns: there's “nothing magic” in the tools.
+              Cross-check reliable sources (Repères, Emploi-Québec/IMT, school
+              sites) and validate in the field. Beware prejudices and rumours
+              about jobs, too.
+            </p>
+          </div>
+          <div class="pitfall">
+            <h3>5. Testing everything at once &amp; burning out</h3>
+            <p>
+              Test at most 2 leads in parallel, a few hours a week, while
+              keeping your studies and sleep.
+              <em
+                >Note: this is general prudence drawn from the sources' logic
+                (Plan Z, testing in parallel) — this research verified no
+                burnout figures.</em
+              >
+            </p>
+          </div>
+          <div class="pitfall">
+            <h3>6. Financial &amp; family pressure</h3>
+            <p>
+              Choosing only for salary, or only to please family, without
+              checking whether the daily tasks and lifestyle fit, often ends in
+              dropping out mid-training. That's why personal criteria (§1) and
+              testing the boring part (§2) matter. If money pressure is high,
+              prioritize free tests (RIASEC, Academos, CJE, JeunesExplo,
+              volunteering, simulation) and Québec public training — and talk it
+              through with a guidance counsellor or CJE. That's their job.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5 RESOURCES -->
+      <section id="resources">
+        <div class="sec-head">
+          <div class="num">05 — Resources in Québec / Canada</div>
+          <h2>Free help, in the right order</h2>
+          <p>
+            <strong>Recommended first reflex:</strong> 1) Do the RIASEC quiz on
+            Québec.ca. 2) Book your school's guidance counsellor (or your CJE if
+            you're not studying) and bring your results. 3) Join Academos and
+            contact 2–3 mentors in the fields that came up.
+          </p>
+        </div>
+        <div class="card" style="padding: 6px 6px 0; overflow: hidden">
+          <table>
+            <thead>
+              <tr>
+                <th>Resource</th>
+                <th>Who / cost</th>
+                <th>What it offers</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <a
+                    href="https://www.quebec.ca/emploi/informer-metier-profession/choix-carriere"
+                    target="_blank"
+                    rel="noopener"
+                    >Québec.ca — Making a career choice</a
+                  >
+                  ✓ live-checked
+                </td>
+                <td>Everyone • Free</td>
+                <td>
+                  RIASEC questionnaire, jobs of the future, job profiles, advice
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a
+                    href="https://www.quebec.ca/emploi/informer-metier-profession/choix-carriere/emplois-avenir"
+                    target="_blank"
+                    rel="noopener"
+                    >Québec.ca — Jobs of the future</a
+                  >
+                  ✓ live-checked
+                </td>
+                <td>Especially ages 14–24 • Free</td>
+                <td>RIASEC test, jobs by passion &amp; sector, salaries</td>
+              </tr>
+              <tr>
+                <td>Services Québec (formerly Emploi-Québec)</td>
+                <td>Everyone • Free</td>
+                <td>
+                  Guidance, situation assessment, short internships / workplace
+                  observation, job-search help — via Québec.ca or a local office
+                </td>
+              </tr>
+              <tr>
+                <td>Your cégep / university guidance counsellor</td>
+                <td>Students • Free</td>
+                <td>
+                  2–5 support meetings, psychometric tests,
+                  interests/skills/values synthesis, program changes
+                </td>
+              </tr>
+              <tr>
+                <td>Ordre des conseillers d'orientation du Québec (OCCOQ)</td>
+                <td>Everyone</td>
+                <td>
+                  Directory of private-practice counsellors (fees apply) if
+                  you're not studying — directory on orientation.qc.ca; check
+                  the exact URL on the Order's site
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a
+                    href="https://trouvetoncje.rcjeq.org"
+                    target="_blank"
+                    rel="noopener"
+                    >Carrefours jeunesse-emploi (CJE)</a
+                  >
+                </td>
+                <td>Ages 16–35 (some say 15–35) • Free</td>
+                <td>
+                  Job-search &amp; career-choice support in every region — 111
+                  CJEs
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a
+                    href="https://www.academos.qc.ca/"
+                    target="_blank"
+                    rel="noopener"
+                    >Academos</a
+                  >
+                </td>
+                <td>Ages 14–30 • Free</td>
+                <td>
+                  Virtual mentoring: chat with professionals who love their job,
+                  articles on careers
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a
+                    href="https://www.jeunes-explorateurs.org/demarche-mentor/"
+                    target="_blank"
+                    rel="noopener"
+                    >JeunesExplo</a
+                  >
+                </td>
+                <td>Ages 14–22, secondary &amp; college • Free</td>
+                <td>
+                  One-day workplace internship, virtual exploration —
+                  <em>recheck dates before acting (see Limits)</em>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a
+                    href="https://reperes.qc.ca/"
+                    target="_blank"
+                    rel="noopener"
+                    >Repères</a
+                  >
+                </td>
+                <td>Students (access via your school, file number) • Free</td>
+                <td>
+                  1,200+ professions, training programs, schools, loans &amp;
+                  bursaries, placement stats
+                </td>
+              </tr>
+              <tr>
+                <td>MonEmploi.com</td>
+                <td>Everyone • Free</td>
+                <td>
+                  1,500+ jobs &amp; professions, search by RIASEC code, ~450
+                  training programs — verify the exact address via cégep /
+                  Québec.ca links
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a
+                    href="https://www.inforoutefpt.org/"
+                    target="_blank"
+                    rel="noopener"
+                    >InforouteFPT</a
+                  >
+                </td>
+                <td>Everyone • Free</td>
+                <td>
+                  DEP, ASP, AEP &amp; technical DECs, “student / intern for a
+                  day”
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="https://pygma.ca/" target="_blank" rel="noopener"
+                    >Pygma</a
+                  >
+                </td>
+                <td>Everyone • Free</td>
+                <td>
+                  All DECs &amp; the cégeps offering them, prerequisites,
+                  limited enrolment
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a
+                    href="https://maformationenvideo.ca/"
+                    target="_blank"
+                    rel="noopener"
+                    >Ma formation en vidéo</a
+                  >
+                </td>
+                <td>Everyone • Free</td>
+                <td>Videos on training &amp; careers in Québec</td>
+              </tr>
+              <tr>
+                <td>
+                  <a
+                    href="https://www.m-x.ca/en/insights?id=97"
+                    target="_blank"
+                    rel="noopener"
+                    >TMX Simulator (Montréal Exchange)</a
+                  >
+                </td>
+                <td>Everyone • Free</td>
+                <td>Virtual trading account, real data (15-min delay)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- 6 PLAN -->
+      <section id="plan">
+        <div class="sec-head">
+          <div class="num">06 — Your next 4 weeks</div>
+          <h2>A 4-week exploration plan — 3–5 h/week</h2>
+          <p>
+            Alongside your studies. After the 4 weeks: if one lead stands out,
+            go deeper for 1–2 months (longer project, regular volunteering,
+            intro course) <strong>before</strong> enrolling in long training. If
+            none stands out, that's not failure — restart the cycle with 2 new
+            leads and talk to a counsellor. The method itself (test, note,
+            adjust) is the skill that eventually finds your path.
+          </p>
+        </div>
+        <div class="plan">
+          <div class="week">
+            <h3>Week 1 — Know yourself</h3>
+            <p
+              style="
+                font-size: 13px;
+                font-weight: 700;
+                color: var(--teal);
+                margin: 0;
+              "
+            >
+              Goal: leave with 2–3 written leads
+            </p>
+            <ul>
+              <li>
+                Do the Québec.ca RIASEC quiz (jobs of the future); note your 3
+                dominant traits
+              </li>
+              <li>Fill in your Ikigai (3–5 points per circle)</li>
+              <li>Start the energy journal (5 min each evening)</li>
+              <li>
+                List your non-negotiables (min. salary, study length, hours,
+                solo/group)
+              </li>
+            </ul>
+            <div class="deliv">
+              <strong>Deliverable:</strong> One page — RIASEC traits + Ikigai +
+              criteria + 2–3 ranked leads
+            </div>
+          </div>
+          <div class="week">
+            <h3>Week 2 — Explore on paper</h3>
+            <p
+              style="
+                font-size: 13px;
+                font-weight: 700;
+                color: var(--teal);
+                margin: 0;
+              "
+            >
+              Goal: check each lead is a real job
+            </p>
+            <ul>
+              <li>
+                Per lead: read 2–3 job profiles on Québec.ca / Repères /
+                MonEmploi (daily tasks, training, salary, outlook)
+              </li>
+              <li>
+                Check training on Pygma / InforouteFPT (length, prerequisites,
+                deadline)
+              </li>
+              <li>Watch 2–3 “Ma formation en vidéo” videos</li>
+              <li>
+                Note per lead: what attracts, what worries, the likely boring
+                part
+              </li>
+            </ul>
+            <div class="deliv">
+              <strong>Deliverable:</strong> Comparison table of your 2–3 leads
+              (energy / skill / demand, /5)
+            </div>
+          </div>
+          <div class="week">
+            <h3>Week 3 — Talk &amp; observe</h3>
+            <p
+              style="
+                font-size: 13px;
+                font-weight: 700;
+                color: var(--teal);
+                margin: 0;
+              "
+            >
+              Goal: confront leads with real humans
+            </p>
+            <ul>
+              <li>Join Academos; contact 2 mentors (one per top lead)</li>
+              <li>
+                Ask for two 20-min informational interviews (prepared questions:
+                typical day, worst part, path, advice)
+              </li>
+              <li>
+                Book a guidance counsellor or CJE, bringing your Week 2 table
+              </li>
+              <li>
+                Sign up for a JeunesExplo one-day internship or a “student for a
+                day” if dates allow
+              </li>
+            </ul>
+            <div class="deliv">
+              <strong>Deliverable:</strong> Notes from 2 interviews + summary of
+              the guidance meeting
+            </div>
+          </div>
+          <div class="week">
+            <h3>Week 4 — Test for real &amp; decide</h3>
+            <p
+              style="
+                font-size: 13px;
+                font-weight: 700;
+                color: var(--teal);
+                margin: 0;
+              "
+            >
+              Goal: do it, don't just read about it
+            </p>
+            <ul>
+              <li>
+                Launch <strong>one mini-test per top lead</strong> — e.g. game
+                jam / finished game tutorial; 7-day drawing challenge + 1 real
+                commission; 2 volunteer leading/tutoring sessions; 1 week of TMX
+                simulation with a decision journal
+              </li>
+              <li>
+                Deliberately do the boring part (revisions, grading/planning,
+                keeping the trading journal)
+              </li>
+              <li>
+                Each evening, note: energy after the session — want to do it
+                again tomorrow? Yes / no / why
+              </li>
+            </ul>
+            <div class="deliv">
+              <strong>Deliverable:</strong> Written decision — lead to deepen /
+              keep as a hobby / drop — and the next step (training to verify,
+              portfolio to start, person to recontact)
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="card">
+          <h3>⚠ Limits &amp; things to recheck</h3>
+          <ul style="color: var(--muted); font-size: 14.5px">
+            <li>
+              <strong style="color: var(--ink)">JeunesExplo dates:</strong> the
+              page consulted listed the day as April 15, 2027, with registration
+              until Dec 6, 2026 (secondary) / Jan 31, 2027 (college). Recheck on
+              jeunes-explorateurs.org before acting.
+            </li>
+            <li>
+              <strong style="color: var(--ink)"
+                >Repères / MonEmploi access:</strong
+              >
+              Repères requires access via your school (file number); the exact
+              MonEmploi.com and OCCOQ directory addresses were not live-verified
+              — go via cégep or Québec.ca links.
+            </li>
+            <li>
+              <strong style="color: var(--ink)">Salaries &amp; outlook</strong>
+              vary by region and year — always check the current profile on
+              Québec.ca / Repères / online IMT before deciding.
+            </li>
+            <li>
+              <strong style="color: var(--ink)">Trading sources</strong> are
+              partly commercial; this page gives no financial advice. Simulation
+              with no real money is the only recommended way for a student to
+              test this curiosity.
+            </li>
+            <li>
+              Only the two Québec.ca pages were live-verified on Nov 25, 2026;
+              other facts come from the research index (page excerpts) read that
+              day.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="footer">
+        <h3
+          style="
+            font-family: &quot;DM Serif Display&quot;, serif;
+            font-weight: 400;
+          "
+        >
+          Sources
+        </h3>
+        <p class="sources" style="margin-bottom: 8px">
+          <strong>Live-verified Nov 25, 2026:</strong> quebec.ca — Making a
+          career choice; Jobs of the future (RIASEC).
+        </p>
+        <ul class="sources">
+          <li>
+            Québec.ca news — “One passion, many options” campaign (14–24) •
+            Workforce WindsorEssex Ikigai activity sheet • Cégep
+            Édouard-Montpetit — How to choose your profession (PDF) • Cégep de
+            l'Outaouais guidance service
+          </li>
+          <li>
+            CV Experts — How to test a new career before you commit • Notre
+            École — Tester un métier • GoFreeAgent — How to test a career before
+            you switch • HEC Montréal — Getting information from professionals •
+            Mentornity — Informational interview guide
+          </li>
+          <li>
+            JeunesExplo • Academos • Repères • Pygma • InforouteFPT • Ma
+            formation en vidéo • Find your CJE (rcjeq.org) • TMX / Montréal
+            Exchange simulator
+          </li>
+          <li>
+            Cégep Limoilou — DEC 3D production • NAD-UQAC — Bachelor's in 3D
+            creation for video games (6667) • Cégep de Lévis — DEC Illustration
+            • InforouteFPT / Cégep de l'Outaouais — DEC Recreation (391.A0) •
+            Québec.ca — Programs leading to a teaching authorization
+          </li>
+          <li>
+            On the myths: Philosophes.org — Myths about vocation • Setondji —
+            Stop looking for your passion • MesPlaisirs — Hidden traps behind
+            “find your passion” (citing O'Keefe, Dweck &amp; Walton) • MamaBea —
+            Finding your passion &amp; turning it into a career
+          </li>
+        </ul>
+        <p style="font-size: 13px; color: var(--muted)">
+          English version of the French research report “Trouver sa passion et
+          son emploi de rêve” (Nov 25, 2026). Start today:
+          <a
+            href="https://www.quebec.ca/emploi/informer-metier-profession/choix-carriere/emplois-avenir"
+            target="_blank"
+            rel="noopener"
+            >RIASEC quiz on Québec.ca →</a
+          >
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,4 @@
+ok so turns out the the deckcraft app (supposedly like powerpoint but remade by AI) can't really do exports. only it can open files created inside the app. I can still open pptx files and edit them, but i can't save or export it as pptx files once i do. Gonna have to wait until it gets better and can actually do exports. Until then, I'm gonna have to sitck to powerpoint. (Or maybe use slides) speaking of wich, i can try. (but later)
+
+btw the app still has most of the powerpoint functions, like adding pictures, videos, slides transitions, etc. Not all of it is here, but a lot is.
+as of writing this, the app is in version 0.18.1
